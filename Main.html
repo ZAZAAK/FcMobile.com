@@ -1,0 +1,89 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fc Mobile</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap">
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+        }
+        .logo {
+            margin-top: 20px;
+        }
+        .play-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 12px 24px;
+            font-size: 22px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #007bff, #0056b3);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .play-button:hover {
+            background: linear-gradient(90deg, #0056b3, #004080);
+            transform: scale(1.05);
+        }
+        .footer-text {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+        .footer-text a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+        #iframe-container {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size: 2.5rem; color: #007bff;">Ea Fc</h1>
+    <div class="logo">
+        <img src="https://downloadr2.apkmirror.com/wp-content/uploads/2024/04/26/6621fab7ce41f_com.ea.gp.fifamobile.png" alt="EA FC Logo" width="200" style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    </div>
+    <button class="play-button" onclick="showIframe()">Play</button>
+    <div class="footer-text">
+        Made possible with the cloud gaming platform <a href="https://www.easyfun.gg/games/ea-sports-fc-uefa-euro-2024.html" target="_blank">Easyfun.com</a>
+    </div>
+    <div id="iframe-container" style="display: block;">
+        <iframe src="https://www.easyfun.gg/games/ea-sports-fc-uefa-euro-2024.html" aria-label="Embedded game content"></iframe>
+    </div>
+
+    <script>
+        function showIframe() {
+            document.getElementById('iframe-container').style.display = 'block';
+            window.scrollTo({
+                top: document.getElementById('iframe-container').offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+
+</body></html>
